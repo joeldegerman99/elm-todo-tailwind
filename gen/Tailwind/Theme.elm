@@ -38,17 +38,7 @@ module Tailwind.Theme exposing
     , zinc_800
     , zinc_900
     , zinc_950
-    , neutral_50
-    , neutral_100
-    , neutral_200
-    , neutral_300
-    , neutral_400
-    , neutral_500
-    , neutral_600
-    , neutral_700
-    , neutral_800
-    , neutral_900
-    , neutral_950
+    , neutral
     , stone_50
     , stone_100
     , stone_200
@@ -248,6 +238,13 @@ module Tailwind.Theme exposing
     , rose_900
     , rose_950
     , primary
+    , secondary
+    , accent
+    , base_100
+    , info
+    , success
+    , warning
+    , error
     , Opacity
     , opacity0
     , opacity5
@@ -317,17 +314,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs zinc_800
 @docs zinc_900
 @docs zinc_950
-@docs neutral_50
-@docs neutral_100
-@docs neutral_200
-@docs neutral_300
-@docs neutral_400
-@docs neutral_500
-@docs neutral_600
-@docs neutral_700
-@docs neutral_800
-@docs neutral_900
-@docs neutral_950
+@docs neutral
 @docs stone_50
 @docs stone_100
 @docs stone_200
@@ -527,6 +514,13 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs rose_900
 @docs rose_950
 @docs primary
+@docs secondary
+@docs accent
+@docs base_100
+@docs info
+@docs success
+@docs warning
+@docs error
 
 
 ### Opacities
@@ -774,59 +768,9 @@ zinc_950 =
     Tw.Color "rgb" "9" "9" "11" Tw.ViaVariable
 
 
-neutral_50 : Color
-neutral_50 =
-    Tw.Color "rgb" "250" "250" "250" Tw.ViaVariable
-
-
-neutral_100 : Color
-neutral_100 =
-    Tw.Color "rgb" "245" "245" "245" Tw.ViaVariable
-
-
-neutral_200 : Color
-neutral_200 =
-    Tw.Color "rgb" "229" "229" "229" Tw.ViaVariable
-
-
-neutral_300 : Color
-neutral_300 =
-    Tw.Color "rgb" "212" "212" "212" Tw.ViaVariable
-
-
-neutral_400 : Color
-neutral_400 =
-    Tw.Color "rgb" "163" "163" "163" Tw.ViaVariable
-
-
-neutral_500 : Color
-neutral_500 =
-    Tw.Color "rgb" "115" "115" "115" Tw.ViaVariable
-
-
-neutral_600 : Color
-neutral_600 =
-    Tw.Color "rgb" "82" "82" "82" Tw.ViaVariable
-
-
-neutral_700 : Color
-neutral_700 =
-    Tw.Color "rgb" "64" "64" "64" Tw.ViaVariable
-
-
-neutral_800 : Color
-neutral_800 =
-    Tw.Color "rgb" "38" "38" "38" Tw.ViaVariable
-
-
-neutral_900 : Color
-neutral_900 =
-    Tw.Color "rgb" "23" "23" "23" Tw.ViaVariable
-
-
-neutral_950 : Color
-neutral_950 =
-    Tw.Color "rgb" "10" "10" "10" Tw.ViaVariable
+neutral : Color
+neutral =
+    Tw.Color "rgb" "55" "65" "81" Tw.ViaVariable
 
 
 stone_50 : Color
@@ -1821,7 +1765,42 @@ rose_950 =
 
 primary : Color
 primary =
-    Tw.Color "rgb" "29" "161" "242" Tw.ViaVariable
+    Tw.Color "rgb" "79" "70" "229" Tw.ViaVariable
+
+
+secondary : Color
+secondary =
+    Tw.Color "rgb" "59" "130" "246" Tw.ViaVariable
+
+
+accent : Color
+accent =
+    Tw.Color "rgb" "251" "191" "36" Tw.ViaVariable
+
+
+base_100 : Color
+base_100 =
+    Tw.Color "rgb" "255" "255" "255" Tw.ViaVariable
+
+
+info : Color
+info =
+    Tw.Color "rgb" "58" "191" "248" Tw.ViaVariable
+
+
+success : Color
+success =
+    Tw.Color "rgb" "54" "211" "153" Tw.ViaVariable
+
+
+warning : Color
+warning =
+    Tw.Color "rgb" "251" "189" "35" Tw.ViaVariable
+
+
+error : Color
+error =
+    Tw.Color "rgb" "248" "114" "114" Tw.ViaVariable
 
 
 opacity0 : Opacity
