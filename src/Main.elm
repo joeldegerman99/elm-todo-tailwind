@@ -56,7 +56,35 @@ view : Model -> Html.Html Msg
 view _ =
     styledHtml <|
         div []
-            [ section [ Attr.css [ Tw.bg_color Tw.red_50, Tw.text_color Tw.green_400 ] ]
-                [ p [] [ text "Hej" ]
+            [ section [ Attr.css [ Tw.w_full, Tw.h_full, Tw.space_y_4 ] ]
+                [ viewHeader
+                , section [ Attr.css [ Tw.flex, Tw.items_center, Tw.justify_center ] ]
+                    [ viewCard "Todos..." viewInput
+                    ]
                 ]
             ]
+
+
+viewInput =
+    input
+        [ Attr.placeholder "Foo"
+        , Attr.css [ Tw.border, Tw.rounded_sm, Tw.px_2 ]
+        ]
+        []
+
+
+viewCard : String -> Html msg -> Html msg
+viewCard title body =
+    div [ Attr.css [ Tw.border, Tw.rounded, Tw.space_y_2, Tw.p_4 ] ]
+        [ h2 [ Attr.css [ Tw.text_2xl ] ]
+            [ text title
+            ]
+        , body
+        ]
+
+
+viewHeader : Html msg
+viewHeader =
+    header [ Attr.css [ Tw.px_4, Tw.py_2, Tw.bg_color Tw.gray_200 ] ]
+        [ h1 [ Attr.css [ Tw.text_2xl ] ] [ text "Todo - Tailwind" ]
+        ]
