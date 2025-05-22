@@ -17,4 +17,4 @@ clean:
 # Run the development server
 .PHONY: dev
 dev:
-	docker-compuse up --build
+	docker-compose up --build
